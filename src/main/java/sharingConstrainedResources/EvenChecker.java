@@ -1,4 +1,7 @@
 package sharingConstrainedResources;
 
-public class EvenChecker {
+public class EvenChecker implements Runnable {
+    public void run() {
+
+    }
 }
