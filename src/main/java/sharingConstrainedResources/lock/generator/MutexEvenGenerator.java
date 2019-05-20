@@ -1,4 +1,4 @@
-package sharingConstrainedResources.generator;
+package sharingConstrainedResources.lock.generator;
 
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;

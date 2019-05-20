@@ -1,4 +1,4 @@
-package sharingConstrainedResources.generator;
+package sharingConstrainedResources.lock.generator;
 
 public class EvenGenerator extends IntGenerator {
     private int number = 0;

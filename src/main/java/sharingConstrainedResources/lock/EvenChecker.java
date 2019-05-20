@@ -1,6 +1,6 @@
-package sharingConstrainedResources;
+package sharingConstrainedResources.lock;
 
-import sharingConstrainedResources.generator.Generator;
+import sharingConstrainedResources.lock.generator.Generator;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;

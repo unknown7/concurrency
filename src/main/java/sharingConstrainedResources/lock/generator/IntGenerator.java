@@ -1,4 +1,4 @@
-package sharingConstrainedResources.generator;
+package sharingConstrainedResources.lock.generator;
 
 public abstract class IntGenerator implements Generator {
     private volatile boolean cancel = false;

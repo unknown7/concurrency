@@ -1,4 +1,4 @@
-package sharingConstrainedResources.generator;
+package sharingConstrainedResources.lock.generator;
 
 public interface Generator {
     boolean isCanceled();
