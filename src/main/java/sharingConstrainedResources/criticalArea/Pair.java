@@ -15,7 +15,10 @@ public class Pair {
     public void incrementY() {
         y++;
     }
-
+    public void checkStatus() {
+        if (x != y)
+            throw new RuntimeException();
+    }
     public int getX() {
         return x;
     }
