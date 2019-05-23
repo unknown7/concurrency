@@ -11,6 +11,7 @@ public class Interrupting {
         Future<?> f = exec.submit(r);
         TimeUnit.SECONDS.sleep(1);
         f.cancel(true);
+//        exec.shutdownNow();
     }
 
     public static void main(String[] args) throws InterruptedException {
