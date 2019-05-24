@@ -6,6 +6,10 @@ public class Meal {
         this.id = id;
     }
 
+    public int getId() {
+        return id;
+    }
+
     @Override
     public String toString() {
         return "Meal " + id;

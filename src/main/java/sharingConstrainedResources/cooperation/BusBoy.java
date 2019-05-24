@@ -1,32 +1,30 @@
 package sharingConstrainedResources.cooperation;
 
-public class Chef implements Runnable {
+import java.util.concurrent.TimeUnit;
+
+public class BusBoy implements Runnable {
     private Restaurant restaurant;
-    private int count = 0;
-    public Chef(Restaurant restaurant) {
+    public BusBoy(Restaurant restaurant) {
         this.restaurant = restaurant;
     }
+
     @Override
     public void run() {
         try {
             while (!Thread.interrupted()) {
                 synchronized (this) {
-                    while (restaurant.meal != null) {
+                    while (restaurant.table == null)
                         wait();
-                    }
                 }
-                if (++count == 5) {
-                    System.err.println("order limit 5");
-                    restaurant.exec.shutdownNow();
-                }
-                System.err.println("Order Up!");
+                TimeUnit.MILLISECONDS.sleep(1000);
+                System.err.println("BusBoy clean " + restaurant.table);
                 synchronized (restaurant.waitPerson) {
-                    restaurant.meal = new Meal(count);
+                    restaurant.table = null;
                     restaurant.waitPerson.notifyAll();
                 }
             }
         } catch (InterruptedException e) {
-            System.err.println("Chef interrupted");
+            System.err.println("BusBoy interrupted");
         }
     }
 }
