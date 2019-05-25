@@ -30,7 +30,7 @@ public class Entrance implements Runnable {
         }
         System.err.println("Stopping " + this);
     }
-    public int getValue() {
+    public synchronized int getValue() {
         return number;
     }
 
