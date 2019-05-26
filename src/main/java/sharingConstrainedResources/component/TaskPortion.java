@@ -6,7 +6,7 @@ import java.util.concurrent.TimeUnit;
 
 public class TaskPortion implements Runnable {
     private CountDownLatch latch;
-    private Random random = new Random(47);
+    private static Random random = new Random(47);
     private static int count = 0;
     private int id;
     public TaskPortion(CountDownLatch latch) {
