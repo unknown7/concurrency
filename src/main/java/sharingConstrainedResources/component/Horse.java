@@ -41,4 +41,8 @@ public class Horse implements Runnable {
     public String toString() {
         return "Horse " + id;
     }
+
+    public static void main(String[] args) {
+
+    }
 }
