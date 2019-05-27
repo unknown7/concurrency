@@ -25,9 +25,9 @@ public class DelayedTaskConsumer implements Runnable {
         Random random = new Random(47);
         DelayQueue<DelayedTask> queue = new DelayQueue();
         for (int i = 0; i < 5; i++) {
-            queue.put(new DelayedTask(random.nextInt(500)));
+            queue.put(new DelayedTask(random.nextInt(5000)));
         }
-        queue.add(new DelayedTask.EndSentinel(500, exec));
+        queue.add(new DelayedTask.EndSentinel(5000, exec));
         exec.execute(new DelayedTaskConsumer(queue));
     }
 }

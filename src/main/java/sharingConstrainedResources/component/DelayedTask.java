@@ -20,7 +20,7 @@ public class DelayedTask implements Runnable, Delayed {
 
     @Override
     public void run() {
-        System.err.print(this + "\t");
+        System.err.print(this + " ");
     }
 
     @Override
@@ -53,6 +53,7 @@ public class DelayedTask implements Runnable, Delayed {
 
         @Override
         public void run() {
+            System.err.println();
             for (DelayedTask delayedTask : sequence) {
                 System.err.println(delayedTask.summary());
             }
