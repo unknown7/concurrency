@@ -18,7 +18,7 @@ public class PrioritizedTask implements Runnable, Comparable<PrioritizedTask> {
     }
     @Override
     public int compareTo(PrioritizedTask o) {
-        return priority > o.priority ? 1 : (priority < o.priority ? -1 : 0);
+        return priority > o.priority ? -1 : (priority < o.priority ? 1 : 0);
     }
 
     @Override
@@ -33,7 +33,7 @@ public class PrioritizedTask implements Runnable, Comparable<PrioritizedTask> {
 
     @Override
     public String toString() {
-        return "[ + " + priority + "] Task " + id;
+        return "[ " + priority + " ] Task " + id;
     }
 
     public String summary() {
