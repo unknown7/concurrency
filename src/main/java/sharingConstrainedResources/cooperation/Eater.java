@@ -23,9 +23,9 @@ public class Eater implements Runnable {
     }
 
     public static void main(String[] args) {
-        BlockingQueue<Toast> dryQueue = new LinkedBlockingDeque<>();
-        BlockingQueue<Toast> butteredQueue = new LinkedBlockingDeque<>();
-        BlockingQueue<Toast> finishedQueue = new LinkedBlockingDeque<>();
+        BlockingQueue<Toast> dryQueue = new LinkedBlockingDeque<>(),
+                             butteredQueue = new LinkedBlockingDeque<>(),
+                             finishedQueue = new LinkedBlockingDeque<>();
         ExecutorService exec = Executors.newCachedThreadPool();
         exec.execute(new Dry(dryQueue));
         exec.execute(new Butter(dryQueue, butteredQueue));
