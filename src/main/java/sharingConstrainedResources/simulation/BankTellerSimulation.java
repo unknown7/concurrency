@@ -11,7 +11,6 @@ public class BankTellerSimulation {
         CustomerLine customers = new CustomerLine(100);
         exec.execute(new CustomerGenerator(customers));
         exec.execute(new TellerManager(exec, customers));
-
     }
 }
 
