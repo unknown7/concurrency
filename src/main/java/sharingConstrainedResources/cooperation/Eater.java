@@ -15,7 +15,7 @@ public class Eater implements Runnable {
         try {
             while (!Thread.interrupted()) {
                 Toast toast = finishedQueue.take();
-                System.err.println("Chomp " + toast);
+                System.err.println("Chomping " + toast);
             }
         } catch (InterruptedException e) {
             e.printStackTrace();
