@@ -44,4 +44,9 @@ public class NIOTester {
             }
         }
     }
+
+    public static void main(String[] args) throws IOException {
+        NIOTester tester = new NIOTester();
+        tester.selector();
+    }
 }
