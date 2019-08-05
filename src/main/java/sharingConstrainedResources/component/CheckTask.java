@@ -38,7 +38,7 @@ public class CheckTask<T> implements Runnable {
         final int SIZE = 5;
         ExecutorService exec = Executors.newCachedThreadPool();
         Semaphore semaphore = new Semaphore(SIZE);
-        Pool<Fat> pool = new Pool<Fat>(semaphore, SIZE, Fat.class);
+        Pool<Fat> pool = new Pool<>(semaphore, SIZE, Fat.class);
         for (int i = 0; i < SIZE; i++) {
             exec.execute(new CheckTask<Fat>(pool));
         }
