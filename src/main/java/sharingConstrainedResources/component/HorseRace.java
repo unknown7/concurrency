@@ -10,7 +10,7 @@ import java.util.concurrent.TimeUnit;
 public class HorseRace {
     public static void main(String[] args) {
         final int FINISH_LINE = 27;
-        final int HORSE_NUM = 9;
+        final int HORSE_NUM = 7;
         ExecutorService exec = Executors.newCachedThreadPool();
         List<Horse> horses = new ArrayList<>();
         CyclicBarrier barrier = new CyclicBarrier(HORSE_NUM, () -> {
@@ -36,7 +36,7 @@ public class HorseRace {
                 return;
             }
             try {
-                TimeUnit.MILLISECONDS.sleep(400);
+                TimeUnit.MILLISECONDS.sleep(1000);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
