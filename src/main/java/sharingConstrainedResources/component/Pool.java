@@ -13,7 +13,7 @@ public class Pool<T> {
         this.semaphore = semaphore;
         System.err.println("creating Pool, semaphore.length=" + semaphore.getQueueLength());
         this.size = size;
-        holder = new ArrayList<>(size);
+        holder = new ArrayList<T>(size);
         checked = new boolean[size];
         for (int i = 0; i < size; i++) {
             try {

@@ -15,7 +15,7 @@ public class Interrupting {
         test(new SleepBlocked());
         test(new IOBlocked(System.in));
         test(new SynchronizedBlocked());
-        BlockingQueue<String> queue = new LinkedBlockingQueue<>();
+        final BlockingQueue<String> queue = new LinkedBlockingQueue<String>();
         test(new Runnable() {
             @Override
             public void run() {
